@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
   <GameConditionDef Class="SeasonalWeather.WeatherConditionDef">
     <defName>DoubleRainbow</defName>
     <conditionClass>SeasonalWeather.GameCondition_WeatherEmanation</conditionClass>
@@ -9,7 +8,6 @@
     <weatherDroneLevel>GoodLow</weatherDroneLevel>
     <endMessage>The double rainbow is over.</endMessage>
   </GameConditionDef>
-
   <GameConditionDef>
     <defName>Earthquake</defName>
     <conditionClass>SeasonalWeather.GameCondition_Earthquake</conditionClass>
@@ -17,7 +15,6 @@
     <description>Earthquake</description>
     <endMessage>The earthquake has ended.</endMessage>
   </GameConditionDef>
-
   <GameConditionDef>
     <defName>Wildfire</defName>
     <conditionClass>SeasonalWeather.GameCondition_Wildfire</conditionClass>
@@ -25,5 +22,4 @@
     <description>Wildfire</description>
     <endMessage>The wildfire has ended.</endMessage>
   </GameConditionDef>
-
 </Defs>

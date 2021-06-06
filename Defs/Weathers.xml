@@ -1,6 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
   <WeatherDef>
     <defName>Windy</defName>
     <label>windy</label>
@@ -11,7 +10,8 @@
     <ambientSounds>
       <li>AmbientWind_Storm</li>
     </ambientSounds>
-    <windSpeedFactor>1e12</windSpeedFactor><!--This forces windy-->
+    <windSpeedFactor>1e12</windSpeedFactor>
+    <!--This forces windy-->
     <accuracyMultiplier>0.9</accuracyMultiplier>
     <!-- Colors are Clear -->
     <skyColorsDay>
@@ -39,8 +39,7 @@
       <saturation>1.25</saturation>
     </skyColorsNightMid>
   </WeatherDef>
-
- <WeatherDef>
+  <WeatherDef>
     <defName>Cloudy</defName>
     <label>cloudy</label>
     <description>A cloudy day, lowers brightness.</description>
@@ -51,7 +50,7 @@
       <li>AmbientWind_Clear</li>
     </ambientSounds>
     <!-- Colors are Overcast -->
-     <skyColorsDay>
+    <skyColorsDay>
       <sky>(0.8,0.8,0.8)</sky>
       <shadow>(0.92,0.92,0.92)</shadow>
       <overlay>(0.7,0.7,0.7)</overlay>
@@ -76,7 +75,6 @@
       <saturation>0.9</saturation>
     </skyColorsNightMid>
   </WeatherDef>
-
   <WeatherDef>
     <defName>FogSnow</defName>
     <label>fog snow</label>
@@ -131,7 +129,6 @@
       <saturation>0.9</saturation>
     </skyColorsNightMid>
   </WeatherDef>
-
   <WeatherDef>
     <defName>Dust</defName>
     <label>dust</label>
@@ -185,7 +182,6 @@
       <saturation>0.9</saturation>
     </skyColorsNightMid>
   </WeatherDef>
-
   <WeatherDef>
     <defName>DryDuststorm</defName>
     <label>dry duststorm</label>
@@ -249,7 +245,6 @@
       <saturation>0.9</saturation>
     </skyColorsNightMid>
   </WeatherDef>
-
   <WeatherDef>
     <defName>DoubleRainbow</defName>
     <label>double rainbow</label>
@@ -291,5 +286,4 @@
       </li>
     </modExtensions>
   </WeatherDef>
-
 </Defs>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <Windy.label>windy</Windy.label>
+  <Windy.description>A clear, windy day, great for turbines, not so great for shooting.</Windy.description>
+  <Cloudy.label>cloudy</Cloudy.label>
+  <Cloudy.description>A cloudy day, lowers brightness.</Cloudy.description>
+  <FogSnow.label>fog snow</FogSnow.label>
+  <FogSnow.description>Snow reduces the accuracy of ranged weapons, extinguishes fire, and slows people down, fog reduces sight.</FogSnow.description>
+  <Dust.label>dust</Dust.label>
+  <Dust.description>Dust reduces the accuracy of ranged weapons.</Dust.description>
+  <DryDuststorm.label>dry duststorm</DryDuststorm.label>
+  <DryDuststorm.description>Dry duststorms are dangerous because the lightning can start fires and there is no rain to put them out.</DryDuststorm.description>
+  <DoubleRainbow.label>double rainbow</DoubleRainbow.label>
+  <DoubleRainbow.description>A double rainbow. The weather is soothing.</DoubleRainbow.description>
+</LanguageData>

@@ -1,0 +1,4 @@
+# Changelog for SeasonalWeather
+
+1.0.1.0 - Code cleanup, no longer reupload but continued instead as original is unchanged since 1.1
+
