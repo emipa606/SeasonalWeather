@@ -11,8 +11,6 @@ namespace SeasonalWeather.Utils
     {
         private static readonly Dictionary<string, int> hashCache = new Dictionary<string, int>();
 
-        #region DateNotifier
-
         public static bool IsHashIntervalTick(this DateNotifier dn, int interval)
         {
             return dn.HashOffsetTicks() % interval == 0;
@@ -36,10 +34,6 @@ namespace SeasonalWeather.Utils
             return val;
         }
 
-        #endregion DateNotifie
-
-        #region WeatherWorker
-
         private static int HashOffsetTicks(this WeatherWorker w)
         {
             return Find.TickManager.TicksGame + w.GetHashOffset();
@@ -62,7 +56,5 @@ namespace SeasonalWeather.Utils
 
             return val;
         }
-
-        #endregion WeatherWorker
     }
 }

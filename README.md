@@ -45,7 +45,7 @@ Turkish (by Slevilex)
 Acknowledgements
 HammerheadCow/IgnisGlacies for Windy, Cloudy, and FogSnow weather.
 
-Special thanks to Pardeike's amazing non-destructive patching library, Harmony.
+Special thanks to Pardeike&apos;s amazing non-destructive patching library, Harmony.
 
 ![Image](https://i.imgur.com/Rs6T6cr.png)
 

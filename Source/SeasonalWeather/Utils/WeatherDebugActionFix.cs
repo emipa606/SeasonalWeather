@@ -1,11 +1,4 @@
-﻿using System;
-using System.Linq;
-using System.Reflection;
-using System.Runtime.CompilerServices;
-using HarmonyLib;
-using Verse;
-
-namespace SeasonalWeather.Utils
+﻿namespace SeasonalWeather.Utils
 {
 #if DEBUG
     [StaticConstructorOnStartup]

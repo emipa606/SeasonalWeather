@@ -32,7 +32,7 @@ namespace SeasonalWeather.Utils
                 // Remove def and references
                 var def = DefDatabase<T>.GetNamed(defName);
                 defs.Add(defName, def);
-                AccessTools.Method(typeof(DefDatabase<T>), "Remove").Invoke(null, new[] {def});
+                AccessTools.Method(typeof(DefDatabase<T>), "Remove").Invoke(null, new object[] {def});
             }
         }
     }

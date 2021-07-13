@@ -74,13 +74,12 @@ namespace SeasonalWeather
         private void TremorWalk()
         {
             GetNoise(out var localNoise);
-            if (localNoise < 0.25f)
+            switch (localNoise)
             {
-                direction.Rotate(RotationDirection.Clockwise);
-            }
-            else if (localNoise < 0.5f)
-            {
-                direction.Rotate(RotationDirection.Clockwise);
+                case < 0.25f:
+                case < 0.5f:
+                    direction.Rotate(RotationDirection.Clockwise);
+                    break;
             }
 
             curPos += direction.FacingCell;
