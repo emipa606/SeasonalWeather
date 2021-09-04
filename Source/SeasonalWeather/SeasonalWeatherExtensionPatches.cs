@@ -43,14 +43,14 @@ namespace SeasonalWeather
 
         private static void CheckBaseWeatherCommonalities(DateNotifier __instance)
         {
-            var map = (Map) MI_FindPlayerHomeWithMinTimezone.Invoke(__instance, Array.Empty<object>());
+            var map = (Map)MI_FindPlayerHomeWithMinTimezone.Invoke(__instance, Array.Empty<object>());
             if (map != null)
             {
                 var ext = map.Biome.GetModExtension<SeasonalWeatherExtension>();
                 if (ext != null)
                 {
                     var season = map.GetSeason();
-                    var lastSeason = (Season) FI_lastSeason.GetValue(__instance);
+                    var lastSeason = (Season)FI_lastSeason.GetValue(__instance);
                     if (season == lastSeason ||
                         lastSeason != Season.Undefined && season == lastSeason.GetPreviousSeason())
                     {

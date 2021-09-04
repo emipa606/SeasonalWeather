@@ -1,11 +1,11 @@
 # SeasonalWeather
 
-![Image](https://i.imgur.com/WAEzk68.png)
+![Image](https://i.imgur.com/buuPQel.png)
 
 Update of AaronCRobinsons mod
 https://github.com/AaronCRobinson/SeasonalWeather
 
-![Image](https://i.imgur.com/7Gzt3Rg.png)
+![Image](https://i.imgur.com/pufA0kM.png)
 
 
 [table]
@@ -17,7 +17,7 @@ https://github.com/AaronCRobinson/SeasonalWeather
     [/tr]
 [/table]
 	
-![Image](https://i.imgur.com/NOW7jU1.png)
+![Image](https://i.imgur.com/Z4GOv8H.png)
 
 
 
@@ -45,9 +45,9 @@ Turkish (by Slevilex)
 Acknowledgements
 HammerheadCow/IgnisGlacies for Windy, Cloudy, and FogSnow weather.
 
-Special thanks to Pardeike&apos;s amazing non-destructive patching library, Harmony.
+Special thanks to Pardeike's amazing non-destructive patching library, Harmony.
 
-![Image](https://i.imgur.com/Rs6T6cr.png)
+![Image](https://i.imgur.com/PwoNOj4.png)
 
 
 
@@ -57,5 +57,6 @@ Special thanks to Pardeike&apos;s amazing non-destructive patching library, Harm
 -  For best support, please use the Discord-channel for error-reporting.
 -  Do not report errors by making a discussion-thread, I get no notification of that.
 -  If you have the solution for a problem, please post it to the GitHub repository.
+
 
 

@@ -35,7 +35,7 @@ namespace SeasonalWeather
             // NOTE: if more of these are created, consider a better location
             var def = DefDatabase<WeatherConditionDef>.GetNamed(curWeather.defName);
             var gameCondition_WeatherEmanation =
-                (GameCondition_WeatherEmanation) GameConditionMaker.MakeCondition(def,
+                (GameCondition_WeatherEmanation)GameConditionMaker.MakeCondition(def,
                     Traverse.Create(map.weatherDecider).Field("curWeatherDuration").GetValue<int>());
             gameCondition_WeatherEmanation.weatherDroneLevel = def.weatherDroneLevel;
             Find.CurrentMap.gameConditionManager.RegisterCondition(gameCondition_WeatherEmanation);

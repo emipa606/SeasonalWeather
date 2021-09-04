@@ -13,7 +13,7 @@ namespace SeasonalWeather
 
         static WeatherOverlay_DustParticles()
         {
-            DustParticlesOverlay = (Material) AccessTools.Field(typeof(WeatherOverlay_SnowHard), "SnowOverlayWorld")
+            DustParticlesOverlay = (Material)AccessTools.Field(typeof(WeatherOverlay_SnowHard), "SnowOverlayWorld")
                 .GetValue(new WeatherOverlay_SnowHard());
         }
 

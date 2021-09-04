@@ -27,7 +27,7 @@ namespace SeasonalWeather
         {
             AshCloudColors = new SkyColorSet(new ColorInt(216, 255, 150).ToColor, new ColorInt(234, 200, 255).ToColor,
                 new Color(0.7f, 0.85f, 0.65f), 0.85f);
-            overlays = new List<SkyOverlay> {new WeatherOverlay_DustCloud()};
+            overlays = new List<SkyOverlay> { new WeatherOverlay_DustCloud() };
         }
 
         public override List<SkyOverlay> SkyOverlays(Map map)
@@ -48,7 +48,7 @@ namespace SeasonalWeather
         public override void Init()
         {
             base.Init();
-            var range = new IntRange((int) (SingleMap.Size.x * 0.23f), (int) (SingleMap.Size.x * 0.4f));
+            var range = new IntRange((int)(SingleMap.Size.x * 0.23f), (int)(SingleMap.Size.x * 0.4f));
             fires = range.RandomInRange;
             Log.Message($"{fires}");
             // how to find out if this side is a mountain face?
@@ -107,7 +107,7 @@ namespace SeasonalWeather
         private void SpawnFire(Map map)
         {
             var cell = CellFinder.RandomEdgeCell(direction, map);
-            var fire = (Fire) ThingMaker.MakeThing(ThingDefOf.Fire);
+            var fire = (Fire)ThingMaker.MakeThing(ThingDefOf.Fire);
             fire.fireSize = 1.0f;
             GenSpawn.Spawn(fire, cell, map, Rot4.North);
         }

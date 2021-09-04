@@ -8,7 +8,7 @@ namespace SeasonalWeather.Utils
     internal class LogUtility
     {
         private static readonly FieldInfo FI_usedKeys = AccessTools.Field(typeof(Log), "usedKeys");
-        private static readonly HashSet<int> usedKeys = (HashSet<int>) FI_usedKeys.GetValue(null);
+        private static readonly HashSet<int> usedKeys = (HashSet<int>)FI_usedKeys.GetValue(null);
 
         // Verse.Log
         public static void MessageOnce(string text, int key)

@@ -15,7 +15,7 @@ namespace SeasonalWeather
 
         static WeatherOverlay_DustCloud()
         {
-            DustCloudOverlay = (Material) AccessTools.Field(typeof(WeatherOverlay_Fog), "FogOverlayWorld")
+            DustCloudOverlay = (Material)AccessTools.Field(typeof(WeatherOverlay_Fog), "FogOverlayWorld")
                 .GetValue(new WeatherOverlay_Fog());
         }
 

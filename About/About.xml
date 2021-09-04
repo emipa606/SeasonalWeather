@@ -21,11 +21,11 @@
   <loadAfter>
     <li>brrainz.harmony</li>
   </loadAfter>
-  <description>[img]https://i.imgur.com/WAEzk68.png[/img]
+  <description>[img]https://i.imgur.com/buuPQel.png[/img]
 Update of AaronCRobinsons mod
 https://github.com/AaronCRobinson/SeasonalWeather
 
-[img]https://i.imgur.com/7Gzt3Rg.png[/img]
+[img]https://i.imgur.com/pufA0kM.png[/img]
 
 [table]
     [tr]
@@ -34,7 +34,7 @@ https://github.com/AaronCRobinson/SeasonalWeather
     [/tr]
 [/table]
 	
-[img]https://i.imgur.com/NOW7jU1.png[/img]
+[img]https://i.imgur.com/Z4GOv8H.png[/img]
 
 
 SeasonalWeather
@@ -61,9 +61,9 @@ Turkish (by Slevilex)
 Acknowledgements
 HammerheadCow/IgnisGlacies for Windy, Cloudy, and FogSnow weather.
 
-Special thanks to Pardeike&apos;s amazing non-destructive patching library, Harmony.
+Special thanks to Pardeike's amazing non-destructive patching library, Harmony.
 
-[img]https://i.imgur.com/Rs6T6cr.png[/img]
+[img]https://i.imgur.com/PwoNOj4.png[/img]
 [list]
 [*] See if the the error persists if you just have this mod and its requirements active.
 [*] If not, try adding your other mods until it happens again.
@@ -71,5 +71,6 @@ Special thanks to Pardeike&apos;s amazing non-destructive patching library, Harm
 [*] For best support, please use the Discord-channel for error-reporting.
 [*] Do not report errors by making a discussion-thread, I get no notification of that.
 [*] If you have the solution for a problem, please post it to the GitHub repository.
-[/list]</description>
+[/list]
+</description>
 </ModMetaData>
