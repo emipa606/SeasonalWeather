@@ -7,15 +7,6 @@ https://github.com/AaronCRobinson/SeasonalWeather
 
 ![Image](https://i.imgur.com/pufA0kM.png)
 
-
-[table]
-    [tr]
-        [td]https://invite.gg/Mlie]![Image](https://i.imgur.com/zdzzBrc.png)
-[/td]
-        [td]https://github.com/emipa606/SeasonalWeather]![Image](https://i.imgur.com/kTkpTOE.png)
-[/td]
-    [/tr]
-[/table]
 	
 ![Image](https://i.imgur.com/Z4GOv8H.png)
 
