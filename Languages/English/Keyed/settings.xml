@@ -3,5 +3,6 @@
   <SeasonalWeatherSettingsCategoryLabel>Seasonal Weather</SeasonalWeatherSettingsCategoryLabel>
   <EnableEarthquakesLabel>Enable earthquakes</EnableEarthquakesLabel>
   <EnableWildfiresLabel>Enable wildfires</EnableWildfiresLabel>
+  <Seasonal_CurrentModVersion>Installed mod-version: {0}</Seasonal_CurrentModVersion>
   <!--<DynamicDefNote>NOTE: Currently, these settings are only triggered during the creation or load of map.</DynamicDefNote>-->
 </LanguageData>

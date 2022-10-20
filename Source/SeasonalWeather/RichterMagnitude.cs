@@ -1,14 +1,13 @@
-﻿namespace SeasonalWeather
+﻿namespace SeasonalWeather;
+
+public enum RichterMagnitude : byte
 {
-    public enum RichterMagnitude : byte
-    {
-        Undefined,
-        Micro,
-        Minor,
-        Light,
-        Moderate,
-        Strong,
-        Major,
-        Great
-    }
+    Undefined,
+    Micro,
+    Minor,
+    Light,
+    Moderate,
+    Strong,
+    Major,
+    Great
 }

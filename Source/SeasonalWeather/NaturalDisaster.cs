@@ -1,23 +1,22 @@
 ﻿using RimWorld;
 using Verse;
 
-namespace SeasonalWeather
+namespace SeasonalWeather;
+
+public class NaturalDisaster : GameCondition
 {
-    public class NaturalDisaster : GameCondition
+    public override float AnimalDensityFactor(Map m)
     {
-        public override float AnimalDensityFactor(Map m)
-        {
-            return 0.1f;
-        }
+        return 0.1f;
+    }
 
-        public override float PlantDensityFactor(Map m)
-        {
-            return 0.4f;
-        }
+    public override float PlantDensityFactor(Map m)
+    {
+        return 0.4f;
+    }
 
-        public override bool AllowEnjoyableOutsideNow(Map m)
-        {
-            return false;
-        }
+    public override bool AllowEnjoyableOutsideNow(Map m)
+    {
+        return false;
     }
 }

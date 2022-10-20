@@ -3,31 +3,29 @@ using RimWorld;
 using UnityEngine;
 using Verse;
 
-namespace SeasonalWeather
+namespace SeasonalWeather;
+// NOTE: These broke in A18... but lol this works instead.
+
+[StaticConstructorOnStartup]
+public class WeatherOverlay_DustCloud : SkyOverlay
 {
-    // NOTE: These broke in A18... but lol this works instead.
+    //private static readonly Material DustCloudOverlay = MatLoader.LoadMat("Weather/FogOverlayWorld", -1);
+    private static readonly Material DustCloudOverlay;
 
-    [StaticConstructorOnStartup]
-    public class WeatherOverlay_DustCloud : SkyOverlay
+    static WeatherOverlay_DustCloud()
     {
-        //private static readonly Material DustCloudOverlay = MatLoader.LoadMat("Weather/FogOverlayWorld", -1);
-        private static readonly Material DustCloudOverlay;
+        DustCloudOverlay = (Material)AccessTools.Field(typeof(WeatherOverlay_Fog), "FogOverlayWorld")
+            .GetValue(new WeatherOverlay_Fog());
+    }
 
-        static WeatherOverlay_DustCloud()
-        {
-            DustCloudOverlay = (Material)AccessTools.Field(typeof(WeatherOverlay_Fog), "FogOverlayWorld")
-                .GetValue(new WeatherOverlay_Fog());
-        }
-
-        public WeatherOverlay_DustCloud()
-        {
-            worldOverlayMat = DustCloudOverlay;
-            worldOverlayPanSpeed1 = 0.008f;
-            worldPanDir1 = new Vector2(-1f, -0.26f); //new Vector2(1f, 1f);
-            worldPanDir1.Normalize();
-            worldOverlayPanSpeed2 = 0.012f;
-            worldPanDir2 = new Vector2(-1f, -0.24f); //new Vector2(1f, -1f);
-            worldPanDir2.Normalize();
-        }
+    public WeatherOverlay_DustCloud()
+    {
+        worldOverlayMat = DustCloudOverlay;
+        worldOverlayPanSpeed1 = 0.008f;
+        worldPanDir1 = new Vector2(-1f, -0.26f); //new Vector2(1f, 1f);
+        worldPanDir1.Normalize();
+        worldOverlayPanSpeed2 = 0.012f;
+        worldPanDir2 = new Vector2(-1f, -0.24f); //new Vector2(1f, -1f);
+        worldPanDir2.Normalize();
     }
 }

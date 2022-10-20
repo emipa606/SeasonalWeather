@@ -1,9 +1,8 @@
 ﻿using Verse;
 
-namespace SeasonalWeather
+namespace SeasonalWeather;
+
+internal class FollowsRainExtension : DefModExtension
 {
-    internal class FollowsRainExtension : DefModExtension
-    {
-        public bool followsRain = false;
-    }
+    public bool followsRain = false;
 }

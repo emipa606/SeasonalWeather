@@ -1,8 +1,7 @@
-﻿namespace SeasonalWeather
+﻿namespace SeasonalWeather;
+
+public enum WeatherDroneLevel : byte
 {
-    public enum WeatherDroneLevel : byte
-    {
-        None,
-        GoodLow
-    }
+    None,
+    GoodLow
 }

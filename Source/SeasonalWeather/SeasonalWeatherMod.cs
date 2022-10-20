@@ -1,34 +1,43 @@
-﻿using SettingsHelper;
+﻿using Mlie;
 using UnityEngine;
 using Verse;
 
-namespace SeasonalWeather
+namespace SeasonalWeather;
+
+internal class SeasonalWeatherMod : Mod
 {
-    internal class SeasonalWeatherMod : Mod
+    public static SeasonalWeatherSettings settings;
+    private static string currentVersion;
+
+    public SeasonalWeatherMod(ModContentPack content) : base(content)
     {
-        public static SeasonalWeatherSettings settings;
+        settings = GetSettings<SeasonalWeatherSettings>();
+        currentVersion =
+            VersionFromManifest.GetVersionFromModMetaData(ModLister.GetActiveModWithIdentifier("Mlie.SeasonalWeather"));
+    }
 
-        public SeasonalWeatherMod(ModContentPack content) : base(content)
+    public override string SettingsCategory()
+    {
+        return "SeasonalWeatherSettingsCategoryLabel".Translate();
+    }
+
+    public override void DoSettingsWindowContents(Rect inRect)
+    {
+        var listing_Standard = new Listing_Standard();
+        listing_Standard.Begin(inRect);
+        listing_Standard.CheckboxLabeled("EnableEarthquakesLabel".Translate() + ": ",
+            ref settings.enableEarthquakes);
+        listing_Standard.CheckboxLabeled("EnableWildfiresLabel".Translate() + ": ",
+            ref settings.enableWildfires);
+        //listing_Standard.AddLabelLine("DynamicDefNote".Translate());
+        if (currentVersion != null)
         {
-            settings = GetSettings<SeasonalWeatherSettings>();
+            listing_Standard.Gap();
+            GUI.contentColor = Color.gray;
+            listing_Standard.Label("Seasonal_CurrentModVersion".Translate(currentVersion));
+            GUI.contentColor = Color.white;
         }
 
-        public override string SettingsCategory()
-        {
-            return "SeasonalWeatherSettingsCategoryLabel".Translate();
-        }
-
-        public override void DoSettingsWindowContents(Rect inRect)
-        {
-            var listing_Standard = new Listing_Standard();
-            listing_Standard.Begin(inRect);
-            listing_Standard.AddLabeledCheckbox("EnableEarthquakesLabel".Translate() + ": ",
-                ref settings.enableEarthquakes);
-            listing_Standard.AddLabeledCheckbox("EnableWildfiresLabel".Translate() + ": ",
-                ref settings.enableWildfires);
-            //listing_Standard.AddLabelLine("DynamicDefNote".Translate());
-            listing_Standard.End();
-            settings.Write();
-        }
+        listing_Standard.End();
     }
 }

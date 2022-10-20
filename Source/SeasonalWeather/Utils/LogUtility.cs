@@ -3,23 +3,22 @@ using System.Reflection;
 using HarmonyLib;
 using Verse;
 
-namespace SeasonalWeather.Utils
+namespace SeasonalWeather.Utils;
+
+internal class LogUtility
 {
-    internal class LogUtility
+    private static readonly FieldInfo FI_usedKeys = AccessTools.Field(typeof(Log), "usedKeys");
+    private static readonly HashSet<int> usedKeys = (HashSet<int>)FI_usedKeys.GetValue(null);
+
+    // Verse.Log
+    public static void MessageOnce(string text, int key)
     {
-        private static readonly FieldInfo FI_usedKeys = AccessTools.Field(typeof(Log), "usedKeys");
-        private static readonly HashSet<int> usedKeys = (HashSet<int>)FI_usedKeys.GetValue(null);
-
-        // Verse.Log
-        public static void MessageOnce(string text, int key)
+        if (usedKeys.Contains(key))
         {
-            if (usedKeys.Contains(key))
-            {
-                return;
-            }
-
-            usedKeys.Add(key);
-            Log.Message(text);
+            return;
         }
+
+        usedKeys.Add(key);
+        Log.Message(text);
     }
 }

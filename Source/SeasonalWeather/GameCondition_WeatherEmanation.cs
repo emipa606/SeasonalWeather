@@ -1,9 +1,8 @@
 ﻿using RimWorld;
 
-namespace SeasonalWeather
+namespace SeasonalWeather;
+
+public class GameCondition_WeatherEmanation : GameCondition
 {
-    public class GameCondition_WeatherEmanation : GameCondition
-    {
-        public WeatherDroneLevel weatherDroneLevel;
-    }
+    public WeatherDroneLevel weatherDroneLevel;
 }

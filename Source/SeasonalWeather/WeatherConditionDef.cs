@@ -1,9 +1,8 @@
 ﻿using Verse;
 
-namespace SeasonalWeather
+namespace SeasonalWeather;
+
+public class WeatherConditionDef : GameConditionDef
 {
-    public class WeatherConditionDef : GameConditionDef
-    {
-        public WeatherDroneLevel weatherDroneLevel;
-    }
+    public WeatherDroneLevel weatherDroneLevel;
 }

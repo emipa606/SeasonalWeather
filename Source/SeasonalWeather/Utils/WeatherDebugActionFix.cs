@@ -1,5 +1,4 @@
-﻿namespace SeasonalWeather.Utils
-{
+﻿namespace SeasonalWeather.Utils;
 #if DEBUG
     [StaticConstructorOnStartup]
     internal static class WeatherDebugActionFix
@@ -28,4 +27,3 @@
         }
     }
 #endif
-}
