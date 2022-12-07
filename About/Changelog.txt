@@ -1,5 +1,8 @@
 # Changelog for SeasonalWeather
 
+1.4.2 - Removed an old assembly-file
+
+
 1.4.1 - Mod updated for 1.4 and passed autotests.
 Used DeepL to update translations for ChineseSimplified, French, German, Russian, Turkish
 

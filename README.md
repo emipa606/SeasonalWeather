@@ -52,3 +52,4 @@ Special thanks to Pardeike's amazing non-destructive patching library, Harmony.
 
 
 
+https://steamcommunity.com/sharedfiles/filedetails/changelog/2045114229]Last updated 2022-12-07
