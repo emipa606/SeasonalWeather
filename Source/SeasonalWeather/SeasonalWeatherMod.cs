@@ -13,7 +13,7 @@ internal class SeasonalWeatherMod : Mod
     {
         settings = GetSettings<SeasonalWeatherSettings>();
         currentVersion =
-            VersionFromManifest.GetVersionFromModMetaData(ModLister.GetActiveModWithIdentifier("Mlie.SeasonalWeather"));
+            VersionFromManifest.GetVersionFromModMetaData(content.ModMetaData);
     }
 
     public override string SettingsCategory()

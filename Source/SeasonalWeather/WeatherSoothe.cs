@@ -9,8 +9,8 @@ internal class WeatherSoothe
 {
     static WeatherSoothe()
     {
-        var harmony = new Harmony("rimworld.whyisthat.seasonalweather.weathersoothe");
-        harmony.Patch(AccessTools.Method(typeof(WeatherDecider), nameof(WeatherDecider.StartNextWeather)), null,
+        new Harmony("rimworld.whyisthat.seasonalweather.weathersoothe").Patch(
+            AccessTools.Method(typeof(WeatherDecider), nameof(WeatherDecider.StartNextWeather)), null,
             new HarmonyMethod(typeof(WeatherSoothe), nameof(StartNextWeatherPostfix)));
 
         // NOTE: why am I patching this here?

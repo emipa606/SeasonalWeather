@@ -12,9 +12,8 @@ internal class WeatherProceedsExtensionPatches
 {
     static WeatherProceedsExtensionPatches()
     {
-        var harmony = new Harmony("rimworld.whyisthat.seasonalweather.weatherproceedsextension");
-
-        harmony.Patch(AccessTools.Method(typeof(WeatherDecider), "CurrentWeatherCommonality"), null, null,
+        new Harmony("rimworld.whyisthat.seasonalweather.weatherproceedsextension").Patch(
+            AccessTools.Method(typeof(WeatherDecider), "CurrentWeatherCommonality"), null, null,
             new HarmonyMethod(typeof(WeatherProceedsExtensionPatches), nameof(Transpiler)));
     }
 

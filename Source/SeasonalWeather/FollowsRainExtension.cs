@@ -4,5 +4,5 @@ namespace SeasonalWeather;
 
 internal class FollowsRainExtension : DefModExtension
 {
-    public bool followsRain = false;
+    public readonly bool followsRain = false;
 }

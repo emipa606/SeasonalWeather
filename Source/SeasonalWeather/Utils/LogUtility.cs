@@ -13,12 +13,11 @@ internal class LogUtility
     // Verse.Log
     public static void MessageOnce(string text, int key)
     {
-        if (usedKeys.Contains(key))
+        if (!usedKeys.Add(key))
         {
             return;
         }
 
-        usedKeys.Add(key);
         Log.Message(text);
     }
 }

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Reflection;
+﻿using System.Reflection;
 using HarmonyLib;
 using RimWorld;
 using SeasonalWeather.Utils;
@@ -43,7 +42,7 @@ internal static class SeasonalWeatherExtensionPatches
 
     private static void CheckBaseWeatherCommonalities(DateNotifier __instance)
     {
-        var map = (Map)MI_FindPlayerHomeWithMinTimezone.Invoke(__instance, Array.Empty<object>());
+        var map = (Map)MI_FindPlayerHomeWithMinTimezone.Invoke(__instance, []);
         if (map != null)
         {
             var ext = map.Biome.GetModExtension<SeasonalWeatherExtension>();

@@ -32,7 +32,7 @@ public abstract class DynamicDefHelper<T> where T : Def, new()
             // Remove def and references
             var def = DefDatabase<T>.GetNamed(defName);
             defs.Add(defName, def);
-            AccessTools.Method(typeof(DefDatabase<T>), "Remove").Invoke(null, new object[] { def });
+            AccessTools.Method(typeof(DefDatabase<T>), "Remove").Invoke(null, [def]);
         }
     }
 }

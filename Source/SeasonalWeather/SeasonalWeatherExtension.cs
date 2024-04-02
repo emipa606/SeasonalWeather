@@ -6,10 +6,10 @@ namespace SeasonalWeather;
 
 public class SeasonalWeatherExtension : DefModExtension
 {
-    private readonly List<WeatherCommonalityRecord> fall = new List<WeatherCommonalityRecord>();
-    private readonly List<WeatherCommonalityRecord> spring = new List<WeatherCommonalityRecord>();
-    private readonly List<WeatherCommonalityRecord> summer = new List<WeatherCommonalityRecord>();
-    private readonly List<WeatherCommonalityRecord> winter = new List<WeatherCommonalityRecord>();
+    private readonly List<WeatherCommonalityRecord> fall = [];
+    private readonly List<WeatherCommonalityRecord> spring = [];
+    private readonly List<WeatherCommonalityRecord> summer = [];
+    private readonly List<WeatherCommonalityRecord> winter = [];
 
     public void AdjustBaseWeatherCommonalities(Map map, Season season)
     {

@@ -9,6 +9,7 @@ namespace SeasonalWeather;
 public class WeatherEvent_Tremor : WeatherEvent
 {
     private static float noise;
+    private static readonly HediffDef shredded = HediffDef.Named("Shredded");
     private readonly float magnitude;
     private readonly float xScale = 2.0f;
     private IntVec3 curPos;
@@ -106,7 +107,7 @@ public class WeatherEvent_Tremor : WeatherEvent
             var compRefuel = building.TryGetComp<CompRefuelable>();
             if (compRefuel is { HasFuel: true })
             {
-                FireUtility.TryStartFireIn(cell, map, 3.0f * compRefuel.Fuel);
+                FireUtility.TryStartFireIn(cell, map, 3.0f * compRefuel.Fuel, null);
             }
             else
             {
@@ -114,7 +115,7 @@ public class WeatherEvent_Tremor : WeatherEvent
                 if (compPower != null
                    ) // consider more specific fires for different types. (explosions for power plants)
                 {
-                    FireUtility.TryStartFireIn(cell, map, 2.0f);
+                    FireUtility.TryStartFireIn(cell, map, 2.0f, null);
                 }
             }
 
@@ -125,11 +126,11 @@ public class WeatherEvent_Tremor : WeatherEvent
         {
             if (roofCollapsed)
             {
-                HediffGiverUtility.TryApply(pawn, HediffDefOf.Shredded, null, true, 3);
+                HediffGiverUtility.TryApply(pawn, shredded, null, true, 3);
             }
             else
             {
-                HediffGiverUtility.TryApply(pawn, HediffDefOf.Shredded, null, true);
+                HediffGiverUtility.TryApply(pawn, shredded, null, true);
             }
         }
 

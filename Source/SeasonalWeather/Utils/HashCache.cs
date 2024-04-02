@@ -33,27 +33,4 @@ internal static class HashCache
 
         return val;
     }
-
-    private static int HashOffsetTicks(this WeatherWorker w)
-    {
-        return Find.TickManager.TicksGame + w.GetHashOffset();
-    }
-
-    public static bool IsHashIntervalTick(this WeatherWorker w, int interval)
-    {
-        return w.HashOffsetTicks() % interval == 0;
-    }
-
-    private static int GetHashOffset(this WeatherWorker ww)
-    {
-        if (hashCache.TryGetValue(ww.ToString(), out var val))
-        {
-            return val;
-        }
-
-        val = ww.GetHashCode().HashOffset();
-        hashCache.Add(ww.ToString(), val);
-
-        return val;
-    }
 }

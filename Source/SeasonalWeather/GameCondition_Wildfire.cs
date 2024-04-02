@@ -27,7 +27,7 @@ public class GameCondition_Wildfire : NaturalDisaster
     {
         AshCloudColors = new SkyColorSet(new ColorInt(216, 255, 150).ToColor, new ColorInt(234, 200, 255).ToColor,
             new Color(0.7f, 0.85f, 0.65f), 0.85f);
-        overlays = new List<SkyOverlay> { new WeatherOverlay_DustCloud() };
+        overlays = [new WeatherOverlay_DustCloud()];
     }
 
     public override List<SkyOverlay> SkyOverlays(Map map)
