@@ -9,8 +9,6 @@ namespace SeasonalWeather;
 [StaticConstructorOnStartup]
 internal static class SeasonalWeatherExtensionPatches
 {
-    private const int TickerTypeLong = 2000;
-
     private static readonly MethodInfo MI_FindPlayerHomeWithMinTimezone =
         AccessTools.Method(typeof(DateNotifier), "FindPlayerHomeWithMinTimezone");
 
@@ -23,7 +21,8 @@ internal static class SeasonalWeatherExtensionPatches
         harmony.Patch(AccessTools.Method(typeof(GameComponentUtility), nameof(GameComponentUtility.FinalizeInit)),
             null, new HarmonyMethod(typeof(SeasonalWeatherExtensionPatches), nameof(FinalizeInit)));
         harmony.Patch(AccessTools.Method(typeof(DateNotifier), nameof(DateNotifier.DateNotifierTick)),
-            new HarmonyMethod(typeof(SeasonalWeatherExtensionPatches), nameof(DateNotifierTickPrefix)));
+            new HarmonyMethod(typeof(SeasonalWeatherExtensionPatches), nameof(DateNotifierTickPrefix)),
+            new HarmonyMethod(typeof(SeasonalWeatherExtensionPatches), nameof(DateNotifierTickPostfix)));
     }
 
     // NOTE: should this be somewhere else?
@@ -32,42 +31,41 @@ internal static class SeasonalWeatherExtensionPatches
         CheckBaseWeatherCommonalities(Find.DateNotifier);
     }
 
-    public static void DateNotifierTickPrefix(DateNotifier __instance)
+    public static void DateNotifierTickPrefix(DateNotifier __instance, out Season __state)
     {
-        if (__instance.IsHashIntervalTick(TickerTypeLong))
+        __state = (Season)FI_lastSeason.GetValue(__instance);
+    }
+
+    public static void DateNotifierTickPostfix(DateNotifier __instance, Season __state)
+    {
+        var currentLastSeason = (Season)FI_lastSeason.GetValue(__instance);
+        if (currentLastSeason == __state)
         {
-            CheckBaseWeatherCommonalities(__instance);
+            return;
         }
+
+        CheckBaseWeatherCommonalities(__instance);
     }
 
     private static void CheckBaseWeatherCommonalities(DateNotifier __instance)
     {
         var map = (Map)MI_FindPlayerHomeWithMinTimezone.Invoke(__instance, []);
-        if (map != null)
-        {
-            var ext = map.Biome.GetModExtension<SeasonalWeatherExtension>();
-            if (ext != null)
-            {
-                var season = map.GetSeason();
-                var lastSeason = (Season)FI_lastSeason.GetValue(__instance);
-                if (season == lastSeason ||
-                    lastSeason != Season.Undefined && season == lastSeason.GetPreviousSeason())
-                {
-                    return;
-                }
-
-                Log.Message("SeasonalWeather: season changed");
-                ext.AdjustBaseWeatherCommonalities(map, season);
-            }
-            else
-            {
-                LogUtility.MessageOnce("Custom biome does not have Seasonal Weather data.", 725491);
-            }
-        }
-        else
+        if (map == null)
         {
             LogUtility.MessageOnce("No map found to check base weather commonalities? NomadsLand?", 8720412);
+            return;
         }
+
+        var ext = map.Biome.GetModExtension<SeasonalWeatherExtension>();
+        if (ext == null)
+        {
+            LogUtility.MessageOnce("Custom biome does not have Seasonal Weather data.", map.Biome.GetHashCode());
+            return;
+        }
+
+
+        Log.Message("SeasonalWeather: season changed");
+        ext.AdjustBaseWeatherCommonalities(map, map.GetSeason());
     }
 
     private static Season GetSeason(this Map map)
