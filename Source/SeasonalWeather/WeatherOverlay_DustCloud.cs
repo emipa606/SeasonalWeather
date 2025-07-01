@@ -7,7 +7,7 @@ namespace SeasonalWeather;
 // NOTE: These broke in A18... but lol this works instead.
 
 [StaticConstructorOnStartup]
-public class WeatherOverlay_DustCloud : SkyOverlay
+public class WeatherOverlay_DustCloud : WeatherOverlayDualPanner
 {
     //private static readonly Material DustCloudOverlay = MatLoader.LoadMat("Weather/FogOverlayWorld", -1);
     private static readonly Material DustCloudOverlay;

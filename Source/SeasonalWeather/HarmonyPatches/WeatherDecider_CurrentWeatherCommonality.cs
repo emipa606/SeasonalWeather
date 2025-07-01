@@ -3,20 +3,12 @@ using System.Linq;
 using System.Reflection.Emit;
 using HarmonyLib;
 using RimWorld;
-using Verse;
 
 namespace SeasonalWeather;
 
-[StaticConstructorOnStartup]
-internal class WeatherProceedsExtensionPatches
+[HarmonyPatch(typeof(WeatherDecider), "CurrentWeatherCommonality")]
+public static class WeatherDecider_CurrentWeatherCommonality
 {
-    static WeatherProceedsExtensionPatches()
-    {
-        new Harmony("rimworld.whyisthat.seasonalweather.weatherproceedsextension").Patch(
-            AccessTools.Method(typeof(WeatherDecider), "CurrentWeatherCommonality"), null, null,
-            new HarmonyMethod(typeof(WeatherProceedsExtensionPatches), nameof(Transpiler)));
-    }
-
     public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions, ILGenerator il)
     {
         var instructionList = instructions.ToList();

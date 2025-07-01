@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: double rainbow -->
+  <DoubleRainbow.label>double rainbow</DoubleRainbow.label>
+  <!-- EN: A rare double rainbow has appeared. -->
+  <DoubleRainbow.description>A rare double rainbow has appeared.</DoubleRainbow.description>
+  <!-- EN: The double rainbow is over. -->
+  <DoubleRainbow.endMessage>The double rainbow is over.</DoubleRainbow.endMessage>
+  <!-- EN: earthquake -->
+  <Earthquake.label>earthquake</Earthquake.label>
+  <!-- EN: Earthquake -->
+  <Earthquake.description>Earthquake</Earthquake.description>
+  <!-- EN: The earthquake has ended. -->
+  <Earthquake.endMessage>The earthquake has ended.</Earthquake.endMessage>
+  <!-- EN: wildfire -->
+  <Wildfire.label>wildfire</Wildfire.label>
+  <!-- EN: Wildfire -->
+  <Wildfire.description>Wildfire</Wildfire.description>
+  <!-- EN: The wildfire has ended. -->
+  <Wildfire.endMessage>The wildfire has ended.</Wildfire.endMessage>
+</LanguageData>

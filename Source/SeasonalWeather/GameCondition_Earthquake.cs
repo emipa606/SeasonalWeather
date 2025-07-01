@@ -5,7 +5,7 @@ namespace SeasonalWeather;
 
 public class GameCondition_Earthquake : NaturalDisaster
 {
-    private static readonly IntRange TicksBetweenTremors = new IntRange(800, 1800);
+    private static readonly IntRange TicksBetweenTremors = new(800, 1800);
     private float magnitude;
     private int nextTremorTicks;
 
@@ -24,11 +24,11 @@ public class GameCondition_Earthquake : NaturalDisaster
     public override void Init()
     {
         base.Init();
-        Foreshock();
+        foreshock();
     }
 
     // NOTE: provides a kind of warning before things get too bad.
-    private void Foreshock()
+    private void foreshock()
     {
         Find.CameraDriver.shaker.DoShake(magnitude / 2.0f);
     }

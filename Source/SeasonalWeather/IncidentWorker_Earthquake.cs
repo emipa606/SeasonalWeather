@@ -10,7 +10,7 @@ public class IncidentWorker_Earthquake : IncidentWorker
 
     protected override bool CanFireNowSub(IncidentParms parms)
     {
-        return SeasonalWeatherMod.settings.enableEarthquakes
+        return SeasonalWeatherMod.Settings.EnableEarthquakes
                && !((Map)parms.target).gameConditionManager.ConditionIsActive(GameConditionDefOf.Earthquake);
     }
 

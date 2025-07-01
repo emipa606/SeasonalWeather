@@ -6,7 +6,7 @@ using Verse;
 namespace SeasonalWeather;
 
 [StaticConstructorOnStartup]
-public class WeatherOverlay_DustParticles : SkyOverlay
+public class WeatherOverlay_DustParticles : WeatherOverlayDualPanner
 {
     //private static readonly Material DustParticlesOverlay = MatLoader.LoadMat("Weather/SnowOverlayWorld", -1); 
     private static readonly Material DustParticlesOverlay;

@@ -49,8 +49,8 @@ public class WeatherEvent_Tremor : WeatherEvent
     {
         do
         {
-            CreateFaultCell(curPos);
-            TremorWalk();
+            createFaultCell(curPos);
+            tremorWalk();
             if (!curPos.InBounds(map))
             {
                 expired = true;
@@ -72,7 +72,7 @@ public class WeatherEvent_Tremor : WeatherEvent
         time += xScale;
     }
 
-    private void TremorWalk()
+    private void tremorWalk()
     {
         GetNoise(out var localNoise);
         switch (localNoise)
@@ -86,7 +86,7 @@ public class WeatherEvent_Tremor : WeatherEvent
         curPos += direction.FacingCell;
     }
 
-    private void CreateFaultCell(IntVec3 cell)
+    private void createFaultCell(IntVec3 cell)
     {
         var roofCollapsed = cell.Roofed(map);
 

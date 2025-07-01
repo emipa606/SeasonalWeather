@@ -7,7 +7,7 @@ namespace SeasonalWeather.Utils;
 
 public abstract class DynamicDefHelper<T> where T : Def, new()
 {
-    private readonly Dictionary<string, T> defs = new Dictionary<string, T>();
+    private readonly Dictionary<string, T> defs = new();
 
     public void SetDynamicDet(string defName, bool add = false)
     {

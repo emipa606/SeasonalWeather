@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: earthquake -->
+  <Earthquake.label>earthquake</Earthquake.label>
+  <!-- EN: wildfire -->
+  <Wildfire.label>wildfire</Wildfire.label>
+  <!-- EN: Toxic fallout -->
+  <Wildfire.letterLabel>Toxic fallout</Wildfire.letterLabel>
+  <!-- EN: A large wildfire has broken out nearby and is now spreading to your location. -->
+  <Wildfire.letterText>A large wildfire has broken out nearby and is now spreading to your location.</Wildfire.letterText>
+</LanguageData>

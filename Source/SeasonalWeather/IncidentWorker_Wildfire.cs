@@ -9,7 +9,7 @@ public class IncidentWorker_Wildfire : IncidentWorker
 
     protected override bool CanFireNowSub(IncidentParms parms)
     {
-        return SeasonalWeatherMod.settings.enableWildfires
+        return SeasonalWeatherMod.Settings.EnableWildfires
                && !((Map)parms.target).gameConditionManager.ConditionIsActive(GameConditionDefOf.Wildfire);
     }
 

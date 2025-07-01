@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: cloudy -->
+  <Cloudy.label>cloudy</Cloudy.label>
+  <!-- EN: A cloudy day, lowers brightness. -->
+  <Cloudy.description>A cloudy day, lowers brightness.</Cloudy.description>
+  <!-- EN: double rainbow -->
+  <DoubleRainbow.label>double rainbow</DoubleRainbow.label>
+  <!-- EN: A double rainbow. The weather is soothing. -->
+  <DoubleRainbow.description>A double rainbow. The weather is soothing.</DoubleRainbow.description>
+  <!-- EN: dry duststorm -->
+  <DryDuststorm.label>dry duststorm</DryDuststorm.label>
+  <!-- EN: Dry duststorms are dangerous because the lightning can start fires and there is no rain to put them out. -->
+  <DryDuststorm.description>Dry duststorms are dangerous because the lightning can start fires and there is no rain to put them out.</DryDuststorm.description>
+  <!-- EN: dust -->
+  <Dust.label>dust</Dust.label>
+  <!-- EN: Dust reduces the accuracy of ranged weapons. -->
+  <Dust.description>Dust reduces the accuracy of ranged weapons.</Dust.description>
+  <!-- EN: fog snow -->
+  <FogSnow.label>fog snow</FogSnow.label>
+  <!-- EN: Snow reduces the accuracy of ranged weapons, extinguishes fire, and slows people down, fog reduces sight. -->
+  <FogSnow.description>Snow reduces the accuracy of ranged weapons, extinguishes fire, and slows people down, fog reduces sight.</FogSnow.description>
+  <!-- EN: windy -->
+  <Windy.label>windy</Windy.label>
+  <!-- EN: A clear, windy day, great for turbines, not so great for shooting. -->
+  <Windy.description>A clear, windy day, great for turbines, not so great for shooting.</Windy.description>
+</LanguageData>

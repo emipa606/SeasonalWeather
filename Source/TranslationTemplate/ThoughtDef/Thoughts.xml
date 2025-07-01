@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: weather soothe -->
+  <WeatherDrone.stages.weather_soothe.label>weather soothe</WeatherDrone.stages.weather_soothe.label>
+  <!-- EN: I am a leaf on the wind. -->
+  <WeatherDrone.stages.weather_soothe.description>I am a leaf on the wind.</WeatherDrone.stages.weather_soothe.description>
+</LanguageData>

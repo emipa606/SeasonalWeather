@@ -9,7 +9,7 @@ namespace SeasonalWeather.Utils;
 /// </summary>
 internal static class HashCache
 {
-    private static readonly Dictionary<string, int> hashCache = new Dictionary<string, int>();
+    private static readonly Dictionary<string, int> hashCache = new();
 
     public static bool IsHashIntervalTick(this DateNotifier dn, int interval)
     {

@@ -8,7 +8,7 @@ namespace SeasonalWeather;
 
 public class GameCondition_Wildfire : NaturalDisaster
 {
-    private static readonly IntRange TicksBetweenFires = new IntRange(320, 800);
+    private static readonly IntRange TicksBetweenFires = new(320, 800);
     private static readonly bool noFirewatcher;
     private readonly SkyColorSet AshCloudColors;
 
@@ -68,7 +68,7 @@ public class GameCondition_Wildfire : NaturalDisaster
         {
             if (Find.TickManager.TicksGame > nextFireTicks)
             {
-                SpawnFire(SingleMap);
+                spawnFire(SingleMap);
                 nextFireTicks = Find.TickManager.TicksGame + TicksBetweenFires.RandomInRange;
                 fires--;
                 if (fires <= 0)
@@ -92,7 +92,7 @@ public class GameCondition_Wildfire : NaturalDisaster
 
         foreach (var skyOverlay in overlays)
         {
-            skyOverlay.TickOverlay(SingleMap);
+            skyOverlay.TickOverlay(SingleMap, SkyTargetLerpFactor(SingleMap));
         }
     }
 
@@ -104,7 +104,7 @@ public class GameCondition_Wildfire : NaturalDisaster
         }
     }
 
-    private void SpawnFire(Map map)
+    private void spawnFire(Map map)
     {
         var cell = CellFinder.RandomEdgeCell(direction, map);
         var fire = (Fire)ThingMaker.MakeThing(ThingDefOf.Fire);
