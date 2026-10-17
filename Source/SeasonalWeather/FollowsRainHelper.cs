@@ -2,7 +2,7 @@
 
 namespace SeasonalWeather;
 
-internal class FollowsRainHelper
+internal static class FollowsRainHelper
 {
     //check that all predicates are true...
     public static bool FollowsRain(Map map, WeatherDef weather)

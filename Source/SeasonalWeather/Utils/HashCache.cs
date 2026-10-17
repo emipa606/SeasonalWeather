@@ -11,26 +11,29 @@ internal static class HashCache
 {
     private static readonly Dictionary<string, int> hashCache = new();
 
-    public static bool IsHashIntervalTick(this DateNotifier dn, int interval)
+    extension(DateNotifier dn)
     {
-        return dn.HashOffsetTicks() % interval == 0;
-    }
-
-    private static int HashOffsetTicks(this DateNotifier dn)
-    {
-        return Find.TickManager.TicksGame + dn.GetHashOffset();
-    }
-
-    private static int GetHashOffset(this DateNotifier dn)
-    {
-        if (hashCache.TryGetValue(dn.ToString(), out var val))
+        public bool IsHashIntervalTick(int interval)
         {
-            return val;
+            return dn.HashOffsetTicks() % interval == 0;
         }
 
-        val = dn.GetHashCode().HashOffset();
-        hashCache.Add(dn.ToString(), val);
+        private int HashOffsetTicks()
+        {
+            return Find.TickManager.TicksGame + dn.GetHashOffset();
+        }
 
-        return val;
+        private int GetHashOffset()
+        {
+            if (hashCache.TryGetValue(dn.ToString(), out var val))
+            {
+                return val;
+            }
+
+            val = dn.GetHashCode().HashOffset();
+            hashCache.Add(dn.ToString(), val);
+
+            return val;
+        }
     }
 }

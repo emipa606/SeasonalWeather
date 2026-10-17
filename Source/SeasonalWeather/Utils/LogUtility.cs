@@ -5,7 +5,7 @@ using Verse;
 
 namespace SeasonalWeather.Utils;
 
-internal class LogUtility
+internal static class LogUtility
 {
     private static readonly FieldInfo fiUsedKeys = AccessTools.Field(typeof(Log), "usedKeys");
     private static readonly HashSet<int> usedKeys = (HashSet<int>)fiUsedKeys.GetValue(null);

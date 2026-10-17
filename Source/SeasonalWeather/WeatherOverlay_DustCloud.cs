@@ -9,7 +9,6 @@ namespace SeasonalWeather;
 [StaticConstructorOnStartup]
 public class WeatherOverlay_DustCloud : WeatherOverlayDualPanner
 {
-    //private static readonly Material DustCloudOverlay = MatLoader.LoadMat("Weather/FogOverlayWorld", -1);
     private static readonly Material DustCloudOverlay;
 
     static WeatherOverlay_DustCloud()
@@ -22,10 +21,10 @@ public class WeatherOverlay_DustCloud : WeatherOverlayDualPanner
     {
         worldOverlayMat = DustCloudOverlay;
         worldOverlayPanSpeed1 = 0.008f;
-        worldPanDir1 = new Vector2(-1f, -0.26f); //new Vector2(1f, 1f);
+        worldPanDir1 = new Vector2(-1f, -0.26f);
         worldPanDir1.Normalize();
         worldOverlayPanSpeed2 = 0.012f;
-        worldPanDir2 = new Vector2(-1f, -0.24f); //new Vector2(1f, -1f);
+        worldPanDir2 = new Vector2(-1f, -0.24f);
         worldPanDir2.Normalize();
     }
 }

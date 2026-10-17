@@ -16,7 +16,6 @@ public class IncidentWorker_Wildfire : IncidentWorker
     protected override bool TryExecuteWorker(IncidentParms parms)
     {
         var map = (Map)parms.target;
-        //float points = parms.points;
         duration = def.GetDuration();
         var gameCondition_Wildfire =
             (GameCondition_Wildfire)GameConditionMaker.MakeCondition(GameConditionDefOf.Wildfire, duration);

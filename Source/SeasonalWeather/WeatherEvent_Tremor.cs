@@ -134,7 +134,6 @@ public class WeatherEvent_Tremor : WeatherEvent
             }
         }
 
-        // TODO: consider type of roof in the drop.
         if (roofCollapsed)
         {
             map.roofCollapseBuffer.MarkToCollapse(cell);

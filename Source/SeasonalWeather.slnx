@@ -3,4 +3,23 @@
     <BuildType Name="Release" />
   </Configurations>
   <Project Path="SeasonalWeather/SeasonalWeather.csproj" />
+  <Folder Name="/.github/">
+    <File Path="../.github/copilot-instructions.md" />
+  </Folder>
+  <Folder Name="/XML/About/">
+    <File Path="../About/about.xml" />
+  </Folder>
+  <Folder Name="/XML/Languages/English/Keyed/">
+    <File Path="../Languages/English/Keyed/settings.xml" />
+  </Folder>
+  <Folder Name="/XML/Patches/">
+    <File Path="../Patches/SeasonalWeatherPatches.xml" />
+    <File Path="../Patches/WeatherAdjustments.xml" />
+  </Folder>
+  <Folder Name="/XML/Defs/">
+    <File Path="../Defs/GameConditions.xml" />
+    <File Path="../Defs/Incidents_Map_NaturalDisasters.xml" />
+    <File Path="../Defs/Thoughts.xml" />
+    <File Path="../Defs/Weathers.xml" />
+  </Folder>
 </Solution>
